@@ -16,10 +16,11 @@ def flip_img_horizontal(image):
     image = cv2.flip(image, 1)
     return image
 
-# preprocess image by resizing it to 64x64x3 thereby
-# by cropping it from top and bottom as not all of these pixels contain useful information, however.
+# preprocess image by resize it to 64x64x3 thereby
+# by cropping it from top and bottom as not all of these pixels contain useful information.
 # The top portion of the image captures trees and hills and sky,
 # and the bottom portion of the image captures the hood of the car.
+# Normalize image (YUV conversion) .
 def preprocess(image):
     image = cv2.resize(image, (64, 160))
     image = image[73:image.shape[0] - 23, 0:image.shape[1]]

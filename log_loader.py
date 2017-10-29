@@ -12,7 +12,6 @@ STEERING_FACTOR = 25.0
 # images + steering angle form center, left and right camera
 class DrivingLogLoader:
 
-
     def __init__(self, filepath):
         self.file_path = filepath
 
